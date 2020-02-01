@@ -4,25 +4,38 @@
 ## 目录结构
 ```
 .
-├── docs
-│   ├── .vuepress _(**可选的**)_
-│   │   ├── `components` _(**可选的**)_
-│   │   ├── `theme` _(**可选的**)_
-│   │   │   └── Layout.vue
-│   │   ├── `public` _(**可选的**)_
-│   │   ├── `styles` _(**可选的**)_
-│   │   │   ├── index.styl
-│   │   │   └── palette.styl
-│   │   ├── `templates` _(**可选的, 谨慎配置**)_
-│   │   │   ├── dev.html
-│   │   │   └── ssr.html
-│   │   ├── `config.js` _(**可选的**)_
-│   │   └── `enhanceApp.js` _(**可选的**)_
-│   │ 
-│   ├── README.md
-│   ├── guide
-│   │   └── README.md
-│   └── config.md
-│ 
-└── package.json
+├── app
+│   ├── AbstractController.php
+│   ├── AbstractModel.php
+│   ├── BaseController.php
+│   ├── ExceptionHandle.php
+│   ├── Request.php
+│   ├── admin
+│   ├── common.php
+│   ├── event
+│   ├── event.php
+│   ├── home
+│   ├── listener
+│   ├── middleware.php
+│   ├── model
+│   ├── provider.php
+│   ├── service
+│   ├── subscribe
+│   └── traits
+├── composer.json
+├── database
+│   └── migrations
+├── phpstan.neon
+├── public
+│   ├── favicon.ico
+│   ├── index.php
+│   ├── robots.txt
+│   ├── router.php
+│   ├── static
+│   └── storage
+├── route
+│   ├── admin
+│   ├── app.php
+│   └── home
+└── think
 ```
