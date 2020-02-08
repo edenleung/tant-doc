@@ -4,23 +4,25 @@ module.exports = {
   themeConfig: {
     sidebar: {
       '/guide/': [
-        '', 'getting-started', 'ant-deisgn-vue', 'thinkphp'
+        '',
       ],
+      '/ant-design-vue/': ['', 'structure', 'create', 'authority'],
+      '/thinkphp/': ['', 'structure', 'route'],
       '/': [
-        '',        /* / */
-        'contact', /* /contact.html */
-        'about'    /* /about.html */
+        ''
       ]
     },
     nav: [
       { text: 'Home', link: '/' },
-      { text: '指南', link: '/guide/' },
+      { text: '快速开始', link: '/guide/' },
+      { text: 'Ant Design', link: '/ant-design-vue/'},
+      { text: 'ThinkPHP', link: '/thinkphp/' },
       {
         text: 'Github',
         ariaLabel: 'Project Menu',
         items: [
-          { text: '前端', link: 'https://github.com/edenleung/think-ant-vue' },
-          { text: '后端', link: 'https://github.com/edenleung/think-admin' }
+          { text: '前端项目', link: 'https://github.com/edenleung/think-ant-vue' },
+          { text: '后端项目', link: 'https://github.com/edenleung/think-admin' }
         ]
       }
     ]
