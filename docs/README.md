@@ -1,15 +1,15 @@
 ---
 home: true
-heroText: ThinkPHP 6 
+heroText: ThinkPHP 6
 tagline: Ant Design Vue Pro 基础权限系统
 actionText: 快速上手 →
 actionLink: /guide/
 features:
-- title: 简洁至上
-  details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
-- title: Vue驱动
-  details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
-- title: 高性能
-  details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
-footer: MIT Licensed | Copyright © 2019-present Eden Leung
+  - title: 前后端分离
+    details: 提供 Ant Design Vue、ThinkPHP 6 完全分离的权限管理系统。
+  - title: 角色权限
+    details: 可用于基于 RBAC 设计的角色权限控制，颗粒度细到每一个操作类型。
+  - title: 数据权限
+    details: 提供基于组织结构实现跨部门的数据过滤。
+footer: MIT Licensed | Copyright © 2019-2020 Eden Leung
 ---
