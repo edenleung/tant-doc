@@ -14,9 +14,10 @@
 
 - 数据权限类 [DataScope.php](https://github.com/edenleung/think-admin/blob/6.0/app/dataScope/DataScope.php)
 
-- 模型基类 [BaseModel.php](https://github.com/edenleung/think-admin/blob/6.0/app/BaseModel.php)
+- 模型基类下的 `scopeDataAccess` 方法 [BaseModel.php](https://github.com/edenleung/think-admin/blob/6.0/app/BaseModel.php)
 
 ## 使用
+目前只提供手动过滤，如果后期技术能实现的话，可以考虑使用注解方式自动过滤。
 
 Test 模型类
 ```php
@@ -59,4 +60,4 @@ class TestService
 
 ```
 
-[查询范围](https://www.kancloud.cn/manual/thinkphp6_0/1037586)
+参阅官方文档 [查询范围](https://www.kancloud.cn/manual/thinkphp6_0/1037586)
