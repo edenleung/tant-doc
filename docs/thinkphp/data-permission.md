@@ -35,8 +35,13 @@ Test 服务类
 ```php
 # TestService.php
 
-class TestService
+use app\BaseService;
+
+class TestService extends BaseService
 {
+    /**
+    * 注入模型
+    */
     public function __construct(Test $model)
     {
         $this->model = $model;
