@@ -32,6 +32,45 @@ class Test extends BaseController
 * `sendSuccess()` 返回成功信息
 * `sendError()` 返回失败信息
 
+## 请求类
+`app\BaseRequest.php`
+继承此基类可使用数据验证。
+
+定义请求类
+```php
+<?php
+
+use app\BaseRequest;
+
+class TestRequest
+{
+    // 验证规则
+    protected $rule = [];
+
+    // 错误信息
+    protected $message = [];
+
+    // 验证场景
+    protected $scene = [];
+}
+```
+
+定义控制器
+```php
+<?php
+
+use app\BaseController;
+
+class Test extends BaseController
+{
+    public function add(TestRequest $request)
+    {
+        // 进行数据验证
+        $request->scene('create')->validate();
+    }
+}
+```
+
 ## 服务类
 `app\BaseService.php`
 使用服务类时可以在 `__construct()` 注入对应的模型类
@@ -55,7 +94,7 @@ class Test extends BaseService
 * `add()` 添加一条记录
 * `renew()` 更新一条记录
 * `remove()` 删除一条记录
-* `getError()` 获取验证数据失败信息
+* `getError()` 获取失败信息
 
 ## 模型类
 `app\BaseModel`
