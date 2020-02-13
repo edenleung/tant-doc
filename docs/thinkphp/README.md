@@ -41,11 +41,32 @@ class Test extends BaseController
 ```
 
 ### 验证数据
-建议通过控制器验证数据。
+建议通过请求类验证数据。
+
+定义请求类
+```php
+# TestRequest.php
+<?php
+
+use app\BaseRequest;
+
+class TestRequest extends BaseRequest
+{
+    // 验证规则
+    protected $rule = [];
+
+    // 错误信息
+    protected $message = [];
+
+    // 验证场景
+    protected $scene = [];
+}
+```
+
+定义控制器
 ```php
 # Test.php
 
-use think\exception\ValidateException;
 use app\BaseController;
 
 class Test extends BaseController
@@ -61,23 +82,12 @@ class Test extends BaseController
     /**
     * 添加记录
     */
-    public function add()
+    public function add(TestRequest $request)
     {
-        // 获取前端发送上来的所有数据
-        $data = $this->request->param();
+        // 数据验证
+        $this->validate();
 
-        try {
-            // 验证数据
-            $this->validate($data, [
-                'name' => 'require',
-            ], [
-                'name.require' => '名称必须',
-            ]);
-        } catch (ValidateException $e) {
-            return $this->sendError($e->getError());
-        }
-
-        if ($this->service->add($data) === false) {
+        if ($this->service->add($request->param()) === false) {
             return $this->sendError();
         }
 
