@@ -54,22 +54,13 @@ class TestRequest
     protected $scene = [];
 }
 ```
-
-定义控制器
-```php
-<?php
-
-use app\BaseController;
-
-class Test extends BaseController
-{
-    public function add(TestRequest $request)
-    {
-        // 进行数据验证
-        $request->scene('create')->validate();
-    }
-}
-```
+基类有以下方法
+* `scene()` 指定场景验证
+* `batch()` 批量验证
+* `validate()` 进行验证数据
+* `renew()` 更新一条记录
+* `remove()` 删除一条记录
+* `getError()` 获取失败信息
 
 ## 服务类
 `app\BaseService.php`
