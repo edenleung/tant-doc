@@ -78,7 +78,7 @@ class Test extends BaseController
 ```php
 use app\BaseService;
 
-class Test extends BaseService
+class TestService extends BaseService
 {
     public function __construct(Test $model)
     {
