@@ -1,0 +1,14 @@
+version: "2"
+
+services:
+  
+  ant-design-doc:
+    container_name: ant-design-doc
+    hostname: ant-design-doc
+    image: xiaodi93/ant-design-doc:latest
+    restart: always
+
+networks:
+  default:
+    external:
+      name: server
