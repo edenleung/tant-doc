@@ -12,6 +12,7 @@ script:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t xiaodi93/ant-design-doc:latest .
   - docker push xiaodi93/ant-design-doc:latest
+  - pwd
   - ls
   - scp -i ~/.ssh/travis /home/travis/build/edenleung/tant-doc/docker-compose.yaml root@47.56.158.125:/root/server/ant-design-doc.yaml
   - ssh -i ~/.ssh/travis root@47.56.158.125 "cd server;docker pull xiaodi93/ant-design-doc:latest;docker-compose
