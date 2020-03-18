@@ -2,10 +2,13 @@
 快速安装项目，进行开发。
 
 ### 前端
-拉取最新源码，安装前端项目
+可选 拉取最新源码 安装稳定版本，安装前端项目
 ```bash
-# 拉取项目
+# 最新源码 
 git clone https://github.com/edenleung/think-ant-vue.git
+
+# 稳定版本
+composer create-
 
 # 安装依赖
 cd think-ant-vue && yarn
@@ -28,10 +31,13 @@ yarn run serve
 ```
 
 ### 后端
-拉取最新源码，安装后端项目
+根据情况选取适合自己版本，安装后端项目
 ```bash
-# 拉取项目
+# 最新源码
 git clone https://github.com/edenleung/think-admin.git
+
+# 稳定版
+composer create-project xiaodi/tant
 
 # 安装依赖
 cd think-admin && composer install
