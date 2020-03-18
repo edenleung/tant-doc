@@ -12,9 +12,9 @@ script:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t xiaodi93/ant-design-doc:latest .
   - docker push xiaodi93/ant-design-doc:latest
-  - scp -i ~/.ssh/travis /home/travis/build/edenleung/tant-doc/docker-compose.yml root@47.56.158.125:/root/server/ant-design-doc.yaml
-  - ssh -i ~/.ssh/travis root@47.56.158.125 "cd server;docker pull xiaodi93/ant-design-doc:latest;docker-compose
-    -f ant-design-doc.yaml up -d"
+  #- scp -i ~/.ssh/travis /home/travis/build/edenleung/tant-doc/docker-compose.yml root@47.56.158.125:/root/server/ant-design-doc.yaml
+  #- ssh -i ~/.ssh/travis root@47.56.158.125 "cd server;docker pull xiaodi93/ant-design-doc:latest;docker-compose
+  #  -f ant-design-doc.yaml up -d"
 before_install:
   - openssl aes-256-cbc -K $encrypted_55d08895294a_key -iv $encrypted_55d08895294a_iv
     -in travis.enc -out ~/.ssh/travis -d
