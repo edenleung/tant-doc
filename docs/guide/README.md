@@ -50,3 +50,17 @@ cd think-admin && composer install
 php think tant:install
 ```
 
+#### Nginx
+虚拟主机配置 Rewrite
+```
+# vhost.conf
+
+server {
+    # ...其它配置
+
+    if (!-e $request_filename) {
+        rewrite ^(.*)$ /index.php?s=$1 last;
+    }
+}
+```
+
