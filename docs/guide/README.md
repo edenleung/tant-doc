@@ -35,26 +35,8 @@ git clone https://github.com/edenleung/think-admin.git
 
 # 安装依赖
 cd think-admin && composer install
+
+# 执行安装
+php think tant:install
 ```
 
-配置数据库
-```bash
-cp .env.example .env
-```
-
-```env
-[DATABASE]
-TYPE = mysql
-HOSTNAME = localhost
-DATABASE = think
-USERNAME = root
-PASSWORD = 1234
-HOSTPORT = 3306
-CHARSET = utf8
-DEBUG = true
-```
-
-迁移数据
-```bash
-php think migrate:run
-```
