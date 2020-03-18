@@ -2,7 +2,7 @@
 快速安装项目，进行开发。
 
 ### 前端
-可选 拉取最新源码 安装稳定版本，安装前端项目
+可选 拉取最新源码或下载[稳定版本](https://github.com/edenleung/think-ant-vue/releases/latest)，安装前端项目
 ```bash
 # 最新源码 
 git clone https://github.com/edenleung/think-ant-vue.git
