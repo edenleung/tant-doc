@@ -6,7 +6,7 @@ module.exports = {
       '/guide/': [
         '',
       ],
-      '/ant-design-vue/': ['', 'structure', 'create', 'authority', 'deploy'],
+      '/ant-design-vue/': ['', 'structure', 'create', 'api', 'authority', 'deploy'],
       '/thinkphp/': ['', 'structure', 'base', 'trait' ,'route', 'data-permission'],
       '/': [
         ''
