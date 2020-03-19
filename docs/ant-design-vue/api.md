@@ -38,7 +38,7 @@ export function updateOrder (id, data) {
 }
 
 // 实现一个删除订单的接口 （DELETE）
-export function updateOrder (id,) {
+export function deleteOrder (id) {
   return axios({
     url: '/order/' + id,
     method: 'delete'
