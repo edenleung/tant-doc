@@ -6,6 +6,7 @@
 # .env.production
 
 VUE_APP_API_BASE_URL=xxx
+
 VUE_APP_API_BASE_HOST=xxx
 ```
 
@@ -13,6 +14,8 @@ VUE_APP_API_BASE_HOST=xxx
 打包后的静态文件位于 `dist` 文件夹下
 
 ```bash
+npm run build
+# OR
 yarn build
 ```
 

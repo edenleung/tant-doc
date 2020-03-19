@@ -31,6 +31,8 @@ VUE_APP_API_BASE_URL=http://think.com/admin
 
 启动项目
 ```bash
+npm run  serve
+# OR
 yarn run serve
 ```
 

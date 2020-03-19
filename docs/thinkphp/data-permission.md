@@ -12,7 +12,7 @@
 实现数据权限用到以下类文件
 
 
-- 数据权限类 [DataScope.php](https://github.com/edenleung/think-admin/blob/6.0/app/dataScope/DataScope.php)
+- 数据权限类 [DataScope.php](https://github.com/edenleung/think-admin/blob/6.0/extend/Tant/DataScope/Scope.php)
 
 - 模型基类下的 `scopeDataAccess` 方法 [BaseModel.php](https://github.com/edenleung/think-admin/blob/6.0/app/BaseModel.php)
 
