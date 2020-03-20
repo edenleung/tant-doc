@@ -24,9 +24,6 @@ cd think-ant-vue && yarn
 # 后端域名
 VUE_APP_API_BASE_HOST=http://think.com
 
-# 后端接口
-VUE_APP_API_BASE_URL=http://think.com/admin
-
 ```
 
 启动项目
@@ -51,8 +48,17 @@ cd think-admin && composer install
 # 执行安装
 php think tant:install
 ```
+#### 运行项目
 
-#### Nginx
+* 内置WEB服务器(推荐)
+
+创建一个本地web服务，端口为9501；配置到前端下的 `VUE_APP_API_BASE_HOST` 即可
+```
+cd public && php -S localhost:9501
+```
+
+* Nginx
+
 虚拟主机配置 Rewrite
 ```
 # vhost.conf
