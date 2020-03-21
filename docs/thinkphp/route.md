@@ -1,5 +1,5 @@
 # 路由配置
-系统默认是开启多应用，请在 `/route` 文件夹下配置对应应用的路由。
+系统默认是开启多应用，请在对应应用下 `/route` 文件夹下配置路由。
 
 实现路由权限拦截的，必须配置以下中间件。
 * Jwt中间件 `xiaodi\Middleware\Jwt`
@@ -10,7 +10,7 @@
 ## 普通路由
 就一条普通的路由，啥限制都没有。
 ```php
-# /route/admin/app.php
+# /app/admin/route/app.php
 
 use app\admin\middleware\Permission;
 use think\facade\Route;
@@ -25,7 +25,7 @@ Route::get('/test/hello', function() {
 ## 用户路由
 一条具有用户（已登录）对象的路由
 ```php
-# /route/admin/app.php
+# /app/admin/route/app.php
 
 use app\admin\middleware\Permission;
 use think\facade\Route;
@@ -40,7 +40,7 @@ Route::rule('/test/user', function() {
 ## 权限路由
 一条具有用户（已登录）对象并且有指定权限访问的路由
 ```php
-# /route/admin/app.php
+# /app/admin/route/app.php
 
 use app\admin\middleware\Permission;
 use think\facade\Route;
