@@ -85,7 +85,10 @@ class Test extends BaseController
     public function add(TestRequest $request)
     {
         // 数据验证
-        $this->validate();
+        if (!$this->validate()) {
+            // 当验证失败时
+            return $this->sendError($request->getError());
+        }
 
         if ($this->service->add($request->param()) === false) {
             return $this->sendError();

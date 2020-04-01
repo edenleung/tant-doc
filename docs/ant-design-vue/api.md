@@ -75,16 +75,16 @@ export default {
     // 当页面挂载完成后 拉取列表数据
     fetchOrder().then(response => {
       // 打印接口返回数据
-      console.log(res.result)
+      console.log(response.result)
 
-      this.data = res.result.data
+      this.data = response.result.data
     })
 
     // 创建订单
     // const orderData = { name: '订单一', price: 100 }
     // createOrder(orderData).then(response => {
     //   // 打印接口返回数据
-    //   console.log(res.result)
+    //   console.log(response.result)
     // })
 
     // 更新订单
@@ -92,14 +92,14 @@ export default {
     // const orderData = { name: '订单一', price: 200 }
     // updateOrder(orderId, orderData).then(response => {
     //   // 打印接口返回数据
-    //   console.log(res.result)
+    //   console.log(response.result)
     // })
 
     // 删除订单
     // const orderId = 1
     // deleteOrder(orderId).then(response => {
     //   // 打印接口返回数据
-    //   console.log(res.result)
+    //   console.log(response.result)
     // })
   }
 }
