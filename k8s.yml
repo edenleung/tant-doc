@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tant-doc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tant-doc
+  template:
+    metadata:
+      labels:
+        app: tant-doc
+    spec:
+      containers:
+      - image: xiaodi93/ant-design-doc
+        name: tant-doc
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: tant-doc
+  annotations:
+    dev.okteto.com/auto-ingress: "true"
+spec:
+  type: ClusterIP  
+  ports:
+  - name: "tant-doc"
+    port: 80
+  selector:
+    app: tant-doc
