@@ -86,6 +86,19 @@ class TestService extends BaseService
 * `renew()` 更新一条记录
 * `remove()` 删除一条记录
 * `getError()` 获取失败信息
+* `transaction($func)` 事务操作（自动回滚）
+
+事务操作 例子
+```php
+public function update($id, array $data)
+{
+    return $this->transaction(function() use ($id, $data){
+         $article = Article::find($id);
+         $article->save($data);
+         return true;
+    });
+}
+```
 
 ## 模型类
 `app\BaseModel`
