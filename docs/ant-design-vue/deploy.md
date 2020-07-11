@@ -36,6 +36,43 @@ server {
 }
 ```
 
+### Docker
+
+[Dockerfile](https://github.com/edenleung/think-ant-vue/blob/master/Dockerfile)
+
+1. 构建镜像
+```
+cd vue-project
+
+docker build -t yourname/image-name:latest .
+
+# Example
+// docker build -t xiaodi93/ant-design:latest .
+```
+
+2. 推送镜像
+
+```
+docker push yourname/image-name:latest
+
+# Example
+// docker push xiaodi93/ant-design:latest
+```
+
+3. 运行镜像
+
+4. Nginx 容器反向代理
+```
+server {
+  listen 80;
+  server_name ant.wfunc.com;
+
+  location / {
+    proxy_pass http://ant-design;
+  }
+}
+
+```
 ### 优化
 #### 按需加载
 页面如需异步加载（不打包到chunk.js）单独一个文件。

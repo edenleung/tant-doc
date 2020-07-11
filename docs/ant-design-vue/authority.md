@@ -42,26 +42,30 @@
 
 #### 例子1
 
-菜单 Test
-* 权限标识为 `Test`
-* 查看权限为 `Test `
+菜单 User
+* 权限标识为 `User`
+* 查看权限为 `User `
 
-Test 页面按钮
-* 权限标识为 `TestAdd`
+User 页面按钮
+* `创建用户` 权限标识 `CreateUser`
+* `更新用户` 权限标识 `UpdateUser`
 ```vue
 <template>
-    <a-button v-action:TestAdd>添加用户</a-button>
+    <div class="row">
+        <a-button v-action:CreateUser>创建用户</a-button>
+        <a-button v-action:UpdateUser>更新用户</a-button>
+    </div>
 </template>
 ```
 
 #### 例子2
-一个页面需要判断多个菜单的按钮权限(跨菜单判断按钮)，可以在当前页面菜单的【查看权限】下追加。
+一个页面需要判断多个菜单的按钮权限(跨菜单判断按钮)，可以在当前页面菜单的【Permission】下追加。
 
-菜单 Test
-* 权限标识为 `Test`
-* 查看权限为 `User` `Order`
+菜单 User
+* 权限标识 = `User`
+* Permission = `User` `Order`
 
-查看权限可以理解成，当前页面的按钮是否存在`User, Order`菜单下。
+Permission 可以理解成，当前页面的按钮是否存在`User, Order`菜单下。
 
 页面使用 `v-action` 命令判断
 
@@ -69,7 +73,7 @@ Test 页面按钮
 # Test.vue
 
 <template>
-    <a-button v-action:UserAdd>添加用户</a-button>
-    <a-button v-action:OrderAdd>添加订单</a-button>
+    <a-button v-action:CreateUser>添加用户</a-button>
+    <a-button v-action:CreateOrder>添加订单</a-button>
 </template>
 ```

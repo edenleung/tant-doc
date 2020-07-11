@@ -28,7 +28,7 @@ VUE_APP_API_BASE_HOST=http://think.com
 
 启动项目
 ```bash
-npm run  serve
+npm run serve
 # OR
 yarn run serve
 ```
@@ -72,3 +72,10 @@ server {
 }
 ```
 
+* Docker
+
+创建PHP容器服务，端口 `9501`
+
+```
+cd docker && docker-compose up
+```
