@@ -49,3 +49,9 @@ Route::rule('/test/user/hello', function() {
 ->middleware(Jwt::class);
 ->middleware(Permission::class, 'hello')
 ```
+
+## 文档
+
+具体 `jwt` 配置参考以下文档。
+
+[friendsofthinkphp/think-jwt](https://github.com/friendsofthinkphp/think-jwt)

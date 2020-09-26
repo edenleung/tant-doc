@@ -31,7 +31,7 @@ export function createOrder (data) {
 // 实现一个更新订单的接口 （PUT）
 export function updateOrder (id, data) {
   return axios({
-    url: '/order',
+    url: `/order/${id}`,
     method: 'put',
     data
   })
@@ -40,7 +40,7 @@ export function updateOrder (id, data) {
 // 实现一个删除订单的接口 （DELETE）
 export function deleteOrder (id) {
   return axios({
-    url: '/order/' + id,
+    url: `/order/${id}`,
     method: 'delete'
   })
 }

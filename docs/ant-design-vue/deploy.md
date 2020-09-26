@@ -77,7 +77,7 @@ server {
 #### 按需加载
 页面如需异步加载（不打包到chunk.js）单独一个文件。
 
-使用配置 `/* webpackChunkName: "Test" */`
+使用 `resolve => require(['@/views/page'], resolve)`
 
 ```js
 # src/config/componentConfigs.js
@@ -98,9 +98,7 @@ export const Components = {
     'Analysis': () => import('@/views/dashboard/Analysis'),
 
     // 异步加载
-    'Test': () => import(/* webpackChunkName: "Test" */ '@/views/test/Index'),
-
-    // ... 在此位置添加你创建的页面文件
+    'Test': resolve => require(['@/views/test/Index'], resolve),
   }
 }
 ```

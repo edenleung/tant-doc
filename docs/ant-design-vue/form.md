@@ -4,7 +4,7 @@
 <template>
   <div>
     <a-card title="发布文章">
-      <a-form :form="form" @submit="handleSubmit">
+      <a-form :form="form">
         <a-form-item label="标题" :label-col="{ span: 5 }" :wrapper-col="{ span: 12 }">
           <a-input
             v-decorator="['title', { rules: [{ required: true, message: '请选择文章标题!' }] }]"
@@ -28,7 +28,7 @@
           </a-select>
         </a-form-item>
         <a-form-item :wrapper-col="{ span: 12, offset: 5 }">
-          <a-button type="primary" html-type="submit">
+          <a-button type="primary" @submit="handleSubmit">
             发布
           </a-button>
         </a-form-item>

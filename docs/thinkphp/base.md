@@ -82,9 +82,9 @@ class TestService extends BaseService
 基类有以下方法
 * `all()` 获取所有数据
 * `paginate()` 获取分页
-* `add()` 添加一条记录
-* `renew()` 更新一条记录
-* `remove()` 删除一条记录
+* `create()` 添加一条记录
+* `update()` 更新一条记录
+* `delete()` 删除一条记录
 * `getError()` 获取失败信息
 * `transaction($func)` 事务操作（自动回滚）
 
@@ -111,14 +111,14 @@ class Test extends BaseModel
 }
 ```
 
-一般 CURD（没有复杂的逻辑）可直接调用 `add` `renew` `remove` 实现简单的`增加` `修改` `删除`
+一般 CURD（没有复杂的逻辑）可直接调用 `create` `update` `delete` 实现简单的`增加` `修改` `删除`
 
-如果有复杂的逻辑，可以在当前模型类下重写 `add` `renew` `remove` 方法,  或者不调用以上方法。
+如果有复杂的逻辑，可以在当前模型类下重写 `create` `update` `delete` 方法,  或者不调用以上方法。
 
 基类有以下方法
 * `all()` 获取所有数据
 * `paginate()` 获取分页
-* `add()` 添加一条记录
-* `renew()` 更新一条记录
-* `remove()` 删除一条记录
+* `create()` 添加一条记录
+* `update()` 更新一条记录
+* `delete()` 删除一条记录
 * `scopeDataAccess()` 数据权限 (数据范围)
